@@ -7,6 +7,7 @@ print("\n******************* Python Calculator *******************\n")
 
 continuar = 's'
 
+# Menu de seleção
 while(continuar == 's' or continuar == 'S'):
     print("Selecione o número da operação desejada:\n")
     print("1 - Soma")
@@ -23,6 +24,7 @@ while(continuar == 's' or continuar == 'S'):
         os.system("cls") 
         continue
 
+    # Entrada de Input com verificações de erros
     try:
         num1 = int(input("\nDigite o primeiro número:"))
     except ValueError:
@@ -56,9 +58,11 @@ while(continuar == 's' or continuar == 'S'):
     menus = { 1:soma, 2:subtracao, 3:multiplicacao, 4:divisao}
     menus.get(menu)()
     
+    # Limpar tela
     input("\nPress Enter to continue...")
     os.system("cls")
     
+    # Iniciar novamente
     continuar = input("Desejar fazer outro calculo (S=SIM / N=NÃO) ?")
     os.system("cls")
     
